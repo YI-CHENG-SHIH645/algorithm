@@ -2,7 +2,7 @@
 // Created by 施奕成 on 2023/2/24.
 //
 #include <gtest/gtest.h>
-#include <dp/dp.h>
+#include <../uva/dp/dp.h>
 #include "common.h"
 
 TEST(DPTest, cutting_sticks) {
