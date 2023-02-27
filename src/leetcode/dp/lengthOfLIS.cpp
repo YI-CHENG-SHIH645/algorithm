@@ -22,6 +22,8 @@ int lengthOfLIS(vector<int>& nums) {
     dp[i][i] = 1;
     if(i+1 < n && nums[i] < nums[i+1]) {
       dp[i][i+1] = 2;
+    } else {
+      dp[i][i+1] = 1;
     }
   }
   for(size_t wl=2; wl<n; ++wl) {
