@@ -17,13 +17,14 @@ int lengthOfLIS(vector<int>& nums) {
 
   size_t n = nums.size();
   int dp[n][n];
-  memset(dp, 0, sizeof(dp));
   for(size_t i=0; i<n; ++i) {
     dp[i][i] = 1;
-    if(i+1 < n && nums[i] < nums[i+1]) {
-      dp[i][i+1] = 2;
-    } else {
-      dp[i][i+1] = 1;
+    if(i+1 < n) {
+      if (nums[i] < nums[i + 1]) {
+        dp[i][i + 1] = 2;
+      } else {
+        dp[i][i + 1] = 1;
+      }
     }
   }
   for(size_t wl=2; wl<n; ++wl) {
