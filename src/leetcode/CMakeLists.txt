@@ -4,5 +4,4 @@ add_library(leetcode ${CPP_LIST} ${HEADER_LIST})
 target_include_directories(leetcode
   INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}
 )
-target_link_libraries(leetcode PRIVATE Boost::boost)
 target_compile_features(leetcode PUBLIC cxx_std_11)

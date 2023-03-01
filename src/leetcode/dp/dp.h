@@ -9,3 +9,5 @@
 using namespace std;
 
 int lengthOfLIS(vector<int>& nums);
+
+int maxSubArray(vector<int>& nums);
