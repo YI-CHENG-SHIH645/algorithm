@@ -16,3 +16,5 @@ target_link_libraries(
   leetcode
   uva
 )
+
+gtest_discover_tests(tests)

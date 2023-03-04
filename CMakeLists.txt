@@ -6,6 +6,7 @@ project(
   LANGUAGES CXX
 )
 
+enable_testing()  # You have to add this
 find_package(Doxygen)
 find_package(Boost REQUIRED)
 find_package(GTest REQUIRED)
