@@ -10,17 +10,17 @@ class UF {
 public:
     explicit UF(const std::vector<std::vector<T>>& grid) {
       int m = (int)grid.size(), n = (int)grid[0].size();
-      max_comp_size = INT_MIN;
       count = 0;
       for(int i=0; i<m; ++i) {
         for (int j=0; j<n; ++j) {
           parent.push_back(i * n + j);
-          if(grid[i][j] != (T)'0') {
+          if(grid[i][j] != (T)0) {
             ++count;
           }
         }
       }
       mn = (int)parent.size();
+      if(count > 0) max_comp_size = 1;
       component_sz = std::vector<int>(mn, 1);
     }
 
