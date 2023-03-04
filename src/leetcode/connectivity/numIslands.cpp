@@ -22,8 +22,9 @@ public:
 
   void quick_union(int i, int j) {
     if(parent[i] == parent[j]) return;
+    int iid = parent[i];
     for(int z=0; z<mn; ++z) {
-      if(parent[z] == parent[i]) {
+      if(parent[z] == iid) {
         parent[z] = parent[j];
       }
     }
