@@ -17,3 +17,15 @@ TEST(ConnectivityTest, numIslands) {
           {'0', '0', '0', '1', '1'}};
   EXPECT_EQ(numIslands(grid), 3);
 }
+
+TEST(ConnectivityTest, maxAreaOfIsland) {
+  vector<vector<int>> grid = {{0,0,1,0,0,0,0,1,0,0,0,0,0},
+                              {0,0,0,0,0,0,0,1,1,1,0,0,0},
+                              {0,1,1,0,1,0,0,0,0,0,0,0,0},
+                              {0,1,0,0,1,1,0,0,1,0,1,0,0},
+                              {0,1,0,0,1,1,0,0,1,1,1,0,0},
+                              {0,0,0,0,0,0,0,0,0,0,1,0,0},
+                              {0,0,0,0,0,0,0,1,1,1,0,0,0},
+                              {0,0,0,0,0,0,0,1,1,0,0,0,0}};
+  EXPECT_EQ(maxAreaOfIsland(grid), 6);
+}

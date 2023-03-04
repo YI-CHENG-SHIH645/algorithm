@@ -1,12 +1,12 @@
 //
-// Created by 施奕成 on 2023/3/4.
+// Created by 施奕成 on 2023/3/5.
 //
 #include "connectivity.h"
 using namespace std;
 
-int numIslands(vector<vector<char>>& grid) {
+int maxAreaOfIsland(vector<vector<int>>& grid) {
   int m = (int)grid.size(), n = (int)grid[0].size();
-  UF<char> uf(grid);
+  UF<int> uf(grid);
   for(int i=0; i<m; ++i) {
     for(int j=0; j<n; ++j) {
       if(grid[i][j] - '0') {
@@ -18,5 +18,5 @@ int numIslands(vector<vector<char>>& grid) {
       }
     }
   }
-  return uf.get_count();
+  return uf.get_max_comp_size();
 }
