@@ -16,7 +16,8 @@ void put(TreeNode **node, vector<int>& nums, int l, int r) {
 
 TreeNode* sortedArrayToBST(vector<int>& nums) {
   int n = (int)nums.size();
-  TreeNode **root = nullptr;
+  auto root = new TreeNode*;
+  *root = nullptr;
   put(root, nums, 0, n);
   return *root;
 }
