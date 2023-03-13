@@ -2,6 +2,7 @@
 // Created by 施奕成 on 2023/3/13.
 //
 #include "tree.h"
+#include <climits>
 using namespace std;
 
 bool checkValid(TreeNode* root, long l, long u) {
