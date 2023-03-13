@@ -6,6 +6,6 @@
 
 TEST(TreeTest, sortedArrayToBST) {
   std::vector<int> a{1, 2, 3, 4, 5};
-  TreeNode ans = sortedArrayToBST(a);
+  TreeNode *ans = sortedArrayToBST(a);
   EXPECT_TRUE(isValidBST(ans));
 }
