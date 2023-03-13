@@ -2,7 +2,7 @@
 // Created by 施奕成 on 2023/3/4.
 //
 #include <gtest/gtest.h>
-#include <connectivity/connectivity.h>
+#include <uf/connectivity.h>
 using namespace std;
 
 TEST(ConnectivityTest, numIslands) {
