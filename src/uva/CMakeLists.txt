@@ -4,4 +4,4 @@ add_library(uva ${CPP_LIST} ${HEADER_LIST})
 target_include_directories(uva
   INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}
 )
-target_compile_features(uva PUBLIC cxx_std_11)
+target_compile_features(uva PUBLIC cxx_std_17)
