@@ -1,5 +1,5 @@
-import os
 import glob
+import os
 
 # Available at setup time due to pyproject.toml
 from pybind11 import get_cmake_dir
@@ -35,14 +35,14 @@ ext_modules = [
 ]
 
 setup(
-    name="algorithm",
+    name="Algorithm",
     version=__version__,
     author="Yi-cheng",
     author_email="z2x98653322@gmail.com",
     # url="https://github.com/pybind/python_example",
     description="A repo for practicing algorithms",
     long_description="",
-    ext_package="algorithm",
+    ext_package="Algorithm",
     ext_modules=ext_modules,
     extras_require={"test": "pytest"},
     # Currently, build_ext only provides an optional "highest supported C++

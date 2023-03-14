@@ -11,19 +11,24 @@ struct TreeNode {
   TreeNode *right;
   TreeNode() : val(0), left(nullptr), right(nullptr) {}
   explicit TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-  TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+  TreeNode(int x, TreeNode *left, TreeNode *right)
+      : val(x), left(left), right(right) {}
 };
 
-int maxDepth(TreeNode* root);
+int maxDepth(TreeNode *root);
 
-int minDepth(TreeNode* root);
+int minDepth(TreeNode *root);
 
-TreeNode* mergeTrees(TreeNode* root1, TreeNode* root2);
+TreeNode *mergeTrees(TreeNode *root1, TreeNode *root2);
 
-std::vector<std::vector<int>> levelOrder(TreeNode* root);
+std::vector<std::vector<int>> levelOrder(TreeNode *root);
 
-std::vector<std::vector<int>> zigzagLevelOrder(TreeNode* root);
+std::vector<std::vector<int>> zigzagLevelOrder(TreeNode *root);
 
-bool isValidBST(TreeNode* root);
+bool isValidBST(TreeNode *root);
 
-__attribute__((unused)) TreeNode* sortedArrayToBST(std::vector<int>& nums);
+TreeNode *sortedArrayToBST(std::vector<int> &nums);
+
+bool hasPathSum(TreeNode *root, int targetSum);
+
+TreeNode *buildTree(std::vector<int> &preorder, std::vector<int> &inorder);

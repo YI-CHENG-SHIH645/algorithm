@@ -1,9 +1,9 @@
 //
 // Created by 施奕成 on 2023/2/26.
 //
+#include "sp.h"
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
-#include "sp.h"
 
 #define STRINGIFY(x) #x
 #define MACRO_STRINGIFY(x) STRINGIFY(x)
@@ -15,7 +15,7 @@ PYBIND11_MODULE(sp, m) {
           Pybind11 example plugin
           -----------------------
 
-          .. currentmodule:: algorithm.uva.sp
+          .. currentmodule:: Algorithm.uva.sp
 
           .. autosummary::
              :toctree: _generate
@@ -23,11 +23,11 @@ PYBIND11_MODULE(sp, m) {
              longest_paths
       )pbdoc";
 
-    m.def("longest_paths", &longest_paths);
+  m.def("longest_paths", &longest_paths);
 
-    #ifdef VERSION_INFO
-    m.attr("__version__") = MACRO_STRINGIFY(VERSION_INFO);
-    #else
-    m.attr("__version__") = "dev";
-    #endif
+#ifdef VERSION_INFO
+  m.attr("__version__") = MACRO_STRINGIFY(VERSION_INFO);
+#else
+  m.attr("__version__") = "dev";
+#endif
 }

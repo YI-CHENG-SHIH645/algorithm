@@ -3,11 +3,13 @@
 //
 
 #pragma once
+#include <cstring>
 #include <iostream>
 #include <vector>
-#include <cstring>
 using namespace std;
 
-int lengthOfLIS(vector<int>& nums);
+int lengthOfLIS(vector<int> &nums);
 
-int maxSubArray(vector<int>& nums);
+int maxSubArray(vector<int> &nums);
+
+int rob(vector<int> &nums);
