@@ -28,7 +28,7 @@ test:
   source_files:
     - tests
   commands:
-    - python tests/test.py
+    - python tests/test_bs.py
 
 about:
   summary: Algorithm practicing using pybind11
