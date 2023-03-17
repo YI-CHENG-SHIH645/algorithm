@@ -20,14 +20,14 @@ __version__ = "0.0.1"
 ext_modules = [
     *[Pybind11Extension(f"uva.{tgt}",
                         glob.glob(os.path.join(f"src/uva/{tgt}", "*.cpp")),
-                        cxx_std=11,
+                        cxx_std=17,
                         # Example: passing in the version to the compiled code
                         define_macros=[('VERSION_INFO', __version__)],
                         ) for tgt in filter(lambda x: os.path.isdir(os.path.join("src/uva", x)),
                                             os.listdir("src/uva"))],
     *[Pybind11Extension(f"leetcode.{tgt}",
                         glob.glob(os.path.join(f"src/leetcode/{tgt}", "*.cpp")),
-                        cxx_std=11,
+                        cxx_std=17,
                         # Example: passing in the version to the compiled code
                         define_macros=[('VERSION_INFO', __version__)],
                         ) for tgt in filter(lambda x: os.path.isdir(os.path.join("src/leetcode", x)),
