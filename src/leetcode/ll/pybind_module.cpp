@@ -2,17 +2,14 @@
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
 
-#define STRINGIFY(x) #x
-#define MACRO_STRINGIFY(x) STRINGIFY(x)
-
 namespace py = pybind11;
 
 PYBIND11_MODULE(ll, m) {
   m.doc() = R"pbdoc(
-            Pybind11 example plugin
+            algorithm leetcode linked list
             -----------------------
 
-            .. currentmodule:: Algorithm.leetcode.ll
+            .. currentmodule:: algorithm.leetcode.ll
 
             .. autosummary::
                :toctree: _generate
@@ -33,10 +30,4 @@ PYBIND11_MODULE(ll, m) {
   m.def("RemoveDuplicateII", &RemoveDuplicateII);
   m.def("addTwoNumbers", &addTwoNumbers);
   m.def("reverseList", &reverseList);
-
-#ifdef VERSION_INFO
-  m.attr("__version__") = MACRO_STRINGIFY(VERSION_INFO);
-#else
-  m.attr("__version__") = "dev";
-#endif
 }

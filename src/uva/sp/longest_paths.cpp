@@ -2,6 +2,7 @@
 // Created by 施奕成 on 2022/7/30.
 //
 #include "sp.h"
+using namespace std;
 
 // correct answer but TLE
 // void dfs(vector<int> * graph, int s,
@@ -22,8 +23,9 @@
 //  }
 //}
 
-pair<int, int> spfa(vector<int> *graph, int s, int n) {
-  int dis[n + 1], cur;
+pair<int, int> spfa(vector<vector<int>> &graph, int s, int n) {
+  int cur;
+  vector<int> dis(n + 1);
   for (int i = 1; i < n + 1; ++i)
     dis[i] = INT_MIN;
   queue<int> q;
@@ -51,7 +53,7 @@ pair<int, int> spfa(vector<int> *graph, int s, int n) {
 void longest_paths() {
   int n, s, p1, p2, kase = 0;
   while (cin >> n && n) {
-    vector<int> graph[n + 1];
+    vector<vector<int>> graph(n + 1, vector<int>(0));
     cin >> s;
     while (cin >> p1 >> p2 && p1) {
       graph[p1].push_back(p2);
