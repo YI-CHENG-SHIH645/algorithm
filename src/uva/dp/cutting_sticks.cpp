@@ -2,23 +2,23 @@
 // Created by 施奕成 on 2022/7/31.
 //
 #include "dp.h"
+using namespace std;
 
 void cutting_sticks() {
   std::istream::sync_with_stdio(false);
   cin.tie(nullptr);
   cout.tie(nullptr);
-  int l, n;
+  int l, n, tmp;
   while (cin >> l && l) {
     cin >> n;
 
-    int wood[n + 2];
+    vector<int> wood(n + 2);
     wood[0] = 0;
     wood[n + 1] = l;
     for (int i = 1; i < n + 1; ++i)
       cin >> wood[i];
 
-    int dp[n + 2][n + 2], tmp;
-    memset(dp, 0, sizeof(dp));
+    vector<vector<int>> dp(n + 2, vector<int>(n + 2, 0));
     // wl : window length
     // sp : starting point
     // bp : between (non-inclusive) point
