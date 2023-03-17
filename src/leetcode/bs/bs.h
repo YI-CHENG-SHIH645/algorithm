@@ -3,8 +3,9 @@
 //
 
 #pragma once
+#include <algorithm>
 #include <vector>
 
-int searchInsert(std::vector<int>& nums, int target);
+int searchInsert(std::vector<int> &nums, int target);
 
-int findMin(std::vector<int>& nums);
+int findMin(std::vector<int> &nums);

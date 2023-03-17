@@ -22,6 +22,6 @@ PYBIND11_MODULE(pq, m) {
   m.def("kSmallestPairs", &kSmallestPairs);
   m.def("topKFrequent", &topKFrequent);
   py::class_<KthLargest>(m, "KthLargest")
-      .def(py::init<int, vector<int> &>())
+      .def(py::init<int, std::vector<int> &>())
       .def("add", &KthLargest::add);
 }

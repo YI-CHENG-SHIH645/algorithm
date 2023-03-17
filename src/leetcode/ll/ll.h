@@ -3,18 +3,18 @@
 //
 
 #pragma once
+#include <algorithm>
 #include <vector>
-using namespace std;
 
 struct ListNode {
-    int val;
-    ListNode *next;
-    explicit ListNode(int x) : val(x), next(nullptr) {}
+  int val;
+  ListNode *next;
+  explicit ListNode(int x) : val(x), next(nullptr) {}
 };
 
 bool operator==(const ListNode &x, const ListNode &y);
 
-ListNode *makeLinkedList(const vector<int> &, int);
+ListNode *makeLinkedList(const std::vector<int> &, int);
 
 bool hasCycle(ListNode *);
 
@@ -26,4 +26,4 @@ ListNode *RemoveDuplicateII(ListNode *);
 
 ListNode *addTwoNumbers(ListNode *, ListNode *);
 
-ListNode *reverseList(ListNode*);
+ListNode *reverseList(ListNode *);

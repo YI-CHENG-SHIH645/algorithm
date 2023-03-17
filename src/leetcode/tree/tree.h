@@ -1,10 +1,10 @@
 //
 // Created by 施奕成 on 2023/3/11.
 //
+#pragma once
 #include <algorithm>
 #include <vector>
 
-#pragma once
 struct TreeNode {
   int val;
   TreeNode *left;
@@ -30,5 +30,3 @@ bool isValidBST(TreeNode *root);
 TreeNode *sortedArrayToBST(std::vector<int> &nums);
 
 bool hasPathSum(TreeNode *root, int targetSum);
-
-TreeNode *buildTree(std::vector<int> &preorder, std::vector<int> &inorder);

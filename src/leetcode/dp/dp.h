@@ -3,13 +3,13 @@
 //
 
 #pragma once
+#include <algorithm>
 #include <cstring>
 #include <iostream>
 #include <vector>
-using namespace std;
 
-int lengthOfLIS(vector<int> &nums);
+int lengthOfLIS(std::vector<int> &nums);
 
-int maxSubArray(vector<int> &nums);
+int maxSubArray(std::vector<int> &nums);
 
-int rob(vector<int> &nums);
+int rob(std::vector<int> &nums);

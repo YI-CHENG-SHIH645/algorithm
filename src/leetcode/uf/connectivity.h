@@ -3,6 +3,7 @@
 //
 
 #pragma once
+#include <algorithm>
 #include <vector>
 
 template <class T> class UF {
