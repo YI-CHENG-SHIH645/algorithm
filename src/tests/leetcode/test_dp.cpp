@@ -1,8 +1,9 @@
 //
 // Created by 施奕成 on 2023/2/26.
 //
-#include <gtest/gtest.h>
 #include <dp/dp.h>
+#include <gtest/gtest.h>
+using namespace std;
 
 TEST(DPTest, lengthOfLIS) {
   vector<vector<int>> a = {{10, 9, 2, 5, 3, 7, 101, 18},
@@ -11,7 +12,7 @@ TEST(DPTest, lengthOfLIS) {
                            {4, 10, 4, 3, 8, 9}};
   vector<int> golden = {4, 4, 1, 3};
   EXPECT_EQ(a.size(), golden.size());
-  for(int i=0; i<a.size(); ++i) {
+  for (int i = 0; i < a.size(); ++i) {
     EXPECT_EQ(lengthOfLIS(a[i]), golden[i]);
   }
 }
@@ -24,7 +25,7 @@ TEST(DPTest, maxSubArray) {
                            {8, -19, 5, -4, 20}};
   vector<int> golden = {6, 1, 23, -1, 21};
   EXPECT_EQ(a.size(), golden.size());
-  for(int i=0; i<a.size(); ++i) {
+  for (int i = 0; i < a.size(); ++i) {
     EXPECT_EQ(maxSubArray(a[i]), golden[i]);
   }
 }

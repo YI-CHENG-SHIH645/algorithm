@@ -15,7 +15,7 @@ std::vector<std::vector<int>> kSmallestPairs(std::vector<int> &nums1,
 
 class KthLargest {
   int k;
-  std::priority_queue<int, std::vector<int>, std::greater<>> q;
+  std::priority_queue<int, std::vector<int>, std::greater<int>> q;
 
 public:
   KthLargest(int k, std::vector<int> &nums);
