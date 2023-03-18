@@ -7,8 +7,6 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [tool.cibuildwheel]
-test-requires = [
-    "pytest>=7.2.2",
-]
-test-command = "pytest"
+test-requires = "pytest"
+test-command = "pytest {project}/tests"
 test-skip = "*universal2:arm64"
