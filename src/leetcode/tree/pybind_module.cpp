@@ -17,6 +17,7 @@ PYBIND11_MODULE(tree, m) {
         .. autosummary::
            :toctree: _generate
 
+           TreeNode
            hasPathSum
            isValidBST
            levelOrder
@@ -25,6 +26,12 @@ PYBIND11_MODULE(tree, m) {
            minDepth
            sortedArrayToBST
     )pbdoc";
+  py::class_<TreeNode>(m, "TreeNode")
+          .def(py::init<>())
+          .def(py::init<int>())
+          .def(py::init<int, TreeNode *, TreeNode *>())
+          .def_readwrite("left", &TreeNode::left)
+          .def_readwrite("right", &TreeNode::right);
   m.def("hasPathSum", &hasPathSum);
   m.def("isValidBST", &isValidBST);
   m.def("levelOrder", &levelOrder);
