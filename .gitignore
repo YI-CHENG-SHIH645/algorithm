@@ -140,3 +140,4 @@ dmypy.json
 cython_debug/
 
 cmake-build-debug
+.idea
